@@ -19,8 +19,8 @@ function Notifaction() {
   }, [slides.length]);
 
   return (
-    <div className="container padding_top_50">
-      <div className="screen">
+    <div className="container padding_top_50  responsive_container">
+      <div className="screen responsive_screen">
         <div className="content">
           <div>
             <div>
@@ -37,7 +37,7 @@ function Notifaction() {
         </div>
       </div>
 
-      <div className="screen hidecards">
+      <div className="screen hidecards responsive_screen">
         <div className="card_wraper">
           {slides.map((slide, index) => (
             <div

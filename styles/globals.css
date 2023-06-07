@@ -24,6 +24,18 @@
   .right {
     padding: 30px;
   }
+.hidecards{
+  overflow: auto !important;
+
+  position: static !important;
+
+}
+
+.card_wraper{
+  position: relative !important;
+}
+
+
 }
 .left {
   background: radial-gradient(
