@@ -24,6 +24,7 @@ export default function Home() {
 <Notifaction />
 <Watch />
 <Testimonials />
+
         </div>
 
         <div className="screen right">
