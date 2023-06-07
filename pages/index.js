@@ -1,12 +1,39 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-
+import { useState } from 'react';
 import Notifaction from "../components/Notifaction";
 import Watch from "../components/Watch";
 import Testimonials from "../components/Testimonials";
-
+import { useRouter } from 'next/router';
 export default function Home() {
+
+
+  const [email, setEmail] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const router = useRouter();
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setErrorMessage('');
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!isValidEmail(email)) {
+      setErrorMessage('Please enter a valid email');
+      return;
+    }
+
+    // Redirect the user to the desired URL
+    router.push('https://app.loch.one/welcome.');
+  };
+  const isValidEmail = (email) => {
+    // Check if the email contains "@" and "."
+    return email.includes('@') && email.includes('.');
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,35 +46,39 @@ export default function Home() {
         />
       </Head>
 
-      <main className="container">
-        <div className="screen left">
+      <main className="container responsive_container">
+        <div className="screen left responsive_screen">
 <Notifaction />
 <Watch />
 <Testimonials />
 
         </div>
 
-        <div className="screen right">
-          <div className="right_container">
-            <h1 className="signup_heading">Sign up for exclusive access</h1>
-            <div>
-              <input
-                type="text"
-                placeholder="Your email address"
-                class="email_input"
-              />
-            </div>
-
-            <div>
-              <button className="get_started">Get started</button>
-            </div>
-            <div className="email_info">
-              <p className="email_info_text">
-                You’ll receive an email with an invite link to join.
-              </p>
-            </div>
-          </div>
+        <div className="screen right responsive_screen">
+      <form className="right_container" onSubmit={handleSubmit}>
+        <h1 className="signup_heading">Sign up for exclusive access</h1>
+        <div>
+          <input
+            type="text"
+            placeholder="Your email address"
+            className="email_input"
+            value={email}
+            onChange={handleEmailChange}
+          />
         </div>
+        {errorMessage && <p className="error_message">{errorMessage}</p>}
+        <div>
+          <button className="get_started" type="submit">
+            Get started
+          </button>
+        </div>
+        <div className="email_info">
+          <p className="email_info_text">
+            You’ll receive an email with an invite link to join.
+          </p>
+        </div>
+      </form>
+    </div>
       </main>
     </div>
   );

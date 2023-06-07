@@ -19,7 +19,7 @@ function Notifaction() {
   }, [slides.length]);
 
   return (
-    <div className="container">
+    <div className="container padding_top_50">
       <div className="screen">
         <div className="content">
           <div>
