@@ -24,7 +24,7 @@ function Notifaction() {
         <div className="content">
           <div>
             <div>
-              <img src="bell.svg" alt="bel" />
+              <img src="Bell.svg" alt="bel" />
             </div>
             <h1 className="title">
               Get notified when a highly correlated whale makes a move
