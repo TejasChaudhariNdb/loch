@@ -46,7 +46,7 @@ function Testimonials() {
 <div className="flex">
 
 
-          <img src="logo.svg" alt="" />
+          <img src="logo.svg" className="logo" alt="" />
 
           <div
             className="carousel"
@@ -60,7 +60,7 @@ function Testimonials() {
               <div key={index} className="card testicard">
                 <div className="testi_card_header">
                   <div>
-                    <span>Jack F</span> <span>Ex Blackrock PM</span>
+                    <span className="testi_name">Jack F</span> <span className="testi_pos">Ex Blackrock PM</span>
                   </div>
                 </div>
                 <div className="card_content noti_content">{slide}</div>

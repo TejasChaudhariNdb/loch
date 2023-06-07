@@ -18,9 +18,14 @@ body{
 }
 
 .left{
-  background: radial-gradient(79.84% 79.84% at 50% 50%, rgba(31, 169, 17, 0.810119) 17.21%, #2F15D0 64.58%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(
+    99.84% 79.84% at 10% 100%,
+    rgba(20, 169, 17, 0.810119) 47.21%,
+    #2F15D0 85.58%,
+    rgba(0, 0, 0, 0) 100%
+  ),#000;
 
-width: 100%;
+  width: 100%;
 }
 
 .right{
@@ -154,7 +159,7 @@ margin-bottom: 15px;
 
 .testicard {
   scroll-snap-align: center;
-  flex: 0 0 60%;
+  flex: 0 0 50%;
   padding: 10px;
   cursor:grab;
   /* Add additional styling as needed */
@@ -169,6 +174,8 @@ margin-bottom: 15px;
 }
 .noti_content{
   width: 100%;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .testi_title{
@@ -186,4 +193,14 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     height: 1px;
     margin: 9px 5px 0px 28px;
     border-bottom: 1px solid rgba(229, 229, 230, 0.5);
+}
+
+.testi_name{
+  color: #19191A;
+  font-weight: 600;
+}
+
+.testi_pos{
+  color: #96979A;
+  font-size: 15px;
 }
