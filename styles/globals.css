@@ -113,6 +113,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .sub_title{
   color: #F2F2F2;
 opacity: 0.7;
+margin-top: 15px;
 }
 
 .content{
@@ -208,7 +209,8 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     height: 1px;
     margin: 9px 5px 0px 28px;
     border-bottom: 1px solid rgba(229, 229, 230, 0.5);
-}
+margin-bottom: 10px;
+  }
 
 .testi_name{
   color: #19191A;
@@ -217,7 +219,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .testi_pos{
   color: #96979A;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .padding_top_50{
@@ -228,4 +230,19 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: red;
   text-align: center;
   padding-top: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.eyelogo{
+  display: flex;
+  justify-content: end;
+  margin-bottom: 15px;
 }

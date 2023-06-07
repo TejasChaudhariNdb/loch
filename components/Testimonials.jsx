@@ -2,11 +2,10 @@ import React, { useRef, useState } from "react";
 
 function Testimonials() {
   const slides = [
-    "Love how Loch integrates portfolio analytics and whale watching into one unified app.",
-    "I use Loch everyday now. I don't think I could analyze crypto whale trends markets without it. I'm addicted!",
-    "Managing my own portfolio is helpful and well designed. What’s really interesting is watching the whales though. No one else has made whale tracking so simple."
+    { name: "Jack F",pos:'Ex Blackrock PM', content: "Love how Loch integrates portfolio analytics and whale watching into one unified app." },
+    { name: "Yash P",pos:'Research, 3poch Crypto Hedge Fund', content: "I use Loch everyday now. I don't think I could analyze crypto whale trends markets without it. I'm addicted!" },
+    { name: "Shiv S",pos:'Co-Founder Magik Labs', content: "Managing my own portfolio is helpful and well designed. What’s really interesting is watching the whales though. No one else has made whale tracking so simple." }
   ];
-
   const carouselRef = useRef(null);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -60,10 +59,10 @@ function Testimonials() {
               <div key={index} className="card testicard">
                 <div className="testi_card_header">
                   <div>
-                    <span className="testi_name">Jack F</span> <span className="testi_pos">Ex Blackrock PM</span>
+                    <span className="testi_name">{slide.name}</span> <span className="testi_pos">{slide.pos}</span>
                   </div>
                 </div>
-                <div className="card_content noti_content">{slide}</div>
+                <div className="card_content noti_content">{slide.content}</div>
               </div>
             ))}
           </div>

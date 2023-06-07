@@ -11,7 +11,7 @@ function Watch() {
       <div className="screen">
       <div className="content">
           <div>
-            <div>
+            <div className="eyelogo">
               <img src="eye.svg" alt="bel" />
             </div>
             <h1 className="title">

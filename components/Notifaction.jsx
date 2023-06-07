@@ -52,6 +52,7 @@ function Notifaction() {
             <div className="card_content">
             {slide}
             </div>
+            <div className="overlay"></div>
           </div>
            ))}
 
