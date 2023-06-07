@@ -127,24 +127,15 @@
   gap: 10px;
   position: absolute;
   overflow: hidden;
-  /* animation: carousel 10s infinite; */
+  animation: moveSlideshow 12s linear infinite;
 }
 /* animaition */
-
-@keyframes carousel {
-  0% {
-    transform: translateX(0);
-  }
-  33.33% {
-    transform: translateX(-100%);
-  }
-  66.66% {
-    transform: translateX(-200%);
-  }
+@keyframes moveSlideshow {
   100% {
-    transform: translateX(0);
+    transform: translateX(-66.6666%);
   }
 }
+
 
 .card_header {
   display: flex;
@@ -245,4 +236,15 @@
   display: flex;
   justify-content: end;
   margin-bottom: 15px;
+}
+
+
+.hidecards{
+  overflow: hidden;
+    position: relative;
+}
+
+.noti_cards_animation{
+  width: 207px;
+  height: fit-content;
 }

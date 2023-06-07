@@ -37,12 +37,12 @@ function Notifaction() {
         </div>
       </div>
 
-      <div className="screen">
+      <div className="screen hidecards">
         <div className="card_wraper">
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`card ${index === currentSlide ? "active" : ""}`}>
+              className={`card  noti_cards_animation ${index === currentSlide ? "active" : ""}`}>
               <div className="card_header">
                 <img src="bell_card.svg" alt="" />
                 <span>Save</span>
