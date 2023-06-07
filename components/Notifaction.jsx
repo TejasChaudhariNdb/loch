@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Notifaction() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    "Love how Loch integrates portfolio analytics and whale watching into one unified app.",
-    "I use Loch everyday now. I don't think I could analyze crypto whale trends markets without it. I'm addicted!",
-    "Managing my own portfolio is helpful and well designed. What’s really interesting is watching the whales though. No one else has made whale tracking so simple."
+    "We’ll be sendingnotifications to you here",
+    "Notify me when any wallets move more than",
+    "Notify me when any wallet dormant for",
   ];
 
   useEffect(() => {
@@ -39,24 +39,18 @@ function Notifaction() {
 
       <div className="screen">
         <div className="card_wraper">
-        {slides.map((slide, index) => (
+          {slides.map((slide, index) => (
             <div
-            key={index}
-            className={`card ${index === currentSlide ? 'active' : ''}`}
-          >
+              key={index}
+              className={`card ${index === currentSlide ? "active" : ""}`}>
+              <div className="card_header">
+                <img src="bell_card.svg" alt="" />
+                <span>Save</span>
+              </div>
+              <div className="card_content">{slide}</div>
 
-            <div className="card_header">
-              <img src="bell_card.svg" alt="" />
-              <span>Save</span>
             </div>
-            <div className="card_content">
-            {slide}
-            </div>
-            <div className="overlay"></div>
-          </div>
-           ))}
-
-
+          ))}
         </div>
       </div>
     </div>

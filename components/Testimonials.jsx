@@ -2,9 +2,24 @@ import React, { useRef, useState } from "react";
 
 function Testimonials() {
   const slides = [
-    { name: "Jack F",pos:'Ex Blackrock PM', content: "Love how Loch integrates portfolio analytics and whale watching into one unified app." },
-    { name: "Yash P",pos:'Research, 3poch Crypto Hedge Fund', content: "I use Loch everyday now. I don't think I could analyze crypto whale trends markets without it. I'm addicted!" },
-    { name: "Shiv S",pos:'Co-Founder Magik Labs', content: "Managing my own portfolio is helpful and well designed. What’s really interesting is watching the whales though. No one else has made whale tracking so simple." }
+    {
+      name: "Jack F",
+      pos: "Ex Blackrock PM",
+      content:
+        "Love how Loch integrates portfolio analytics and whale watching into one unified app.",
+    },
+    {
+      name: "Yash P",
+      pos: "Research, 3poch Crypto Hedge Fund",
+      content:
+        "I use Loch everyday now. I don't think I could analyze crypto whale trends markets without it. I'm addicted!",
+    },
+    {
+      name: "Shiv S",
+      pos: "Co-Founder Magik Labs",
+      content:
+        "Managing my own portfolio is helpful and well designed. What’s really interesting is watching the whales though. No one else has made whale tracking so simple.",
+    },
   ];
   const carouselRef = useRef(null);
   const [startX, setStartX] = useState(0);
@@ -42,34 +57,33 @@ function Testimonials() {
           <h1 className="testi_title">Testimonials</h1>
           <div className="divider"></div>
 
-<div className="flex">
+          <div className="flex">
+            <img src="logo.svg" className="logo" alt="" />
 
-
-          <img src="logo.svg" className="logo" alt="" />
-
-          <div
-            className="carousel"
-            ref={carouselRef}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseLeave}
-          >
-            {slides.map((slide, index) => (
-              <div key={index} className="card testicard">
-                <div className="testi_card_header">
-                  <div>
-                    <span className="testi_name">{slide.name}</span> <span className="testi_pos">{slide.pos}</span>
+            <div
+              className="carousel"
+              ref={carouselRef}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseLeave}>
+              {slides.map((slide, index) => (
+                <div key={index} className="card testicard">
+                  <div className="testi_card_header">
+                    <div>
+                      <span className="testi_name">{slide.name}</span>{" "}
+                      <span className="testi_pos">{slide.pos}</span>
+                    </div>
+                  </div>
+                  <div className="card_content noti_content">
+                    {slide.content}
                   </div>
                 </div>
-                <div className="card_content noti_content">{slide.content}</div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   );
 }
