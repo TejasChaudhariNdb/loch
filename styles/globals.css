@@ -1,26 +1,75 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+*{
+  font-family: 'Inter';
+  font-style: normal;
+}
+.container{
+  display: flex; 
+
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.screen{
+  flex: 1;
+
 }
 
-* {
-  box-sizing: border-box;
+.left{
+  background: radial-gradient(79.84% 79.84% at 50% 50%, rgba(31, 169, 17, 0.810119) 17.21%, #2F15D0 64.58%, rgba(0, 0, 0, 0) 100%);
+height: 100vh;
+width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.get_started{
+  background: #19191A;
+border: 1px solid #19191A;
+border-radius: 8px;
+padding: 18px 28px;
+gap: 12px;
+color: #FFFFFF;
+width: 100%;
+margin-top: 18px;
+}
+
+.right_container{
+
+}
+
+.email_input{
+
+  width: 100%;
+  min-height: 28px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E6;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04), 0px 1px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  transition: all 0.1s ease 0s;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 120%;
+  color:black;
+
+}
+.email_input::placeholder {
+  color: #CACBCC;
+}
+
+.signup_heading{
+  color: #B0B1B3;
+
+}
+
+.email_info{
+  color: #19191A;
+width: 100%;
+text-align: center;
+font-weight: 600;
+font-size: 16px;
+line-height: 120%;
 }
